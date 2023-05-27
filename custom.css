@@ -1,0 +1,284 @@
+.cz-popup-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100% !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255 255 255/0.6);
+    display: none;
+    z-index: 100;
+}
+
+.cz-popup {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 20rem;
+    padding: 2rem;
+    border-radius: 0.6rem;
+    text-align: center;
+    margin: auto;
+    top: 10%;
+    position: relative;
+    border: 3px solid black;
+}
+
+.cz-modal-header-img {
+    min-width: auto;
+    width: 20%;
+}
+
+.cz-market-modal-title {
+    margin-block-start: 1em;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cz-market-modal-text {
+    margin-block: 1em;
+    font-size: 16px;
+}
+
+.cz-market-modal-footer {
+    text-align: left;
+}
+
+.czForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.czForm[disabled] {
+    pointer-events: none;
+}
+
+.czSelectLabel {
+    font-size: 13px;
+}
+
+.cz-selector-container {
+    margin: 0.6rem 0;
+    position: relative;
+}
+
+.czSelectLabel-1 {
+    font-size: 13px;
+    position: absolute;
+    left: 10px;
+    top: -8px;
+    background-color: #fff;
+    padding-inline: 5px;
+    border-radius: 50px;
+    color: #6b6b6b;
+}
+
+.cz-selector-container:focus-within .czSelectLabel-1 {
+    color: black;
+    transform: scale(1.2);
+    transition: transform 0.1s ease-in;
+}
+
+.cz-selector-container .czSelectLabel-1 {
+    transition: transform 0.1s ease-out;
+}
+
+.czSelect {
+    padding: 12px;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    appearance: none;
+    background-image: url(https://cdn.shopify.com/s/files/1/0055/9284/2330/files/arrow-down.svg?v=1657693258);
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    background-size: 20px;
+    border-radius: 4px;
+}
+
+.cz-confirm-btn {
+    padding: 10px;
+    font-size: 16px;
+    margin: 1rem 0;
+    border-radius: 6px;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: #238af7;
+    background-color: #238af7;
+    color: #fff;
+    border-style: solid;
+}
+.cz-confirm-btn-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.cz-confirm-btn svg{
+    width: 100%;
+    height: 15px;
+    fill: #fff !important;
+}
+.cz-confirm-btn-ico:after {
+    content: " \279C";
+    padding-left: 5px;
+}
+
+.czForm[disabled] > .cz-confirm-btn {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.czSpinner {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
+    margin: auto;
+}
+
+@keyframes spinner-bulqg1 {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+
+    12.5% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+    }
+
+    62.5% {
+        clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+    }
+}
+
+@keyframes spinner-oaa3wk {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+    }
+
+    49.99% {
+        transform: scaleY(1) rotate(135deg);
+    }
+
+    50% {
+        transform: scaleY(-1) rotate(0deg);
+    }
+
+    100% {
+        transform: scaleY(-1) rotate(-135deg);
+    }
+}
+
+
+@media (min-width:300px) and (max-width:425px) {
+    .cz-popup {
+        width: 15rem ;
+
+    }
+
+}
+@media (min-width:768px){
+    .cz-popup {
+        min-width: 18rem ;
+
+    }
+
+}
+.cz-modal-close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* modal close animation */
+
+/* First Animation */
+.cz-swing-out-top-bck {
+	-webkit-animation: swing-out-top-bck 0.6s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+	        animation: swing-out-top-bck 0.6s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+}
+
+  @keyframes swing-out-top-bck {
+    0% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotateX(-100deg);
+              transform: rotateX(-100deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 0;
+    }
+  }
+  
+
+/* second animation */
+.cz-slide-out-top {
+	-webkit-animation: slide-out-top 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-top 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes slide-out-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+  }
+
+
+/* third animation */
+.cz-slit-out-vertical {
+	-webkit-animation: slit-out-vertical 0.4s ease-in both;
+	        animation: slit-out-vertical 0.4s ease-in both;
+}
+
+@keyframes slit-out-vertical {
+    0% {
+      -webkit-transform: translateZ(0) rotateY(0);
+              transform: translateZ(0) rotateY(0);
+      opacity: 1;
+    }
+    54% {
+      -webkit-transform: translateZ(-160px) rotateY(87deg);
+              transform: translateZ(-160px) rotateY(87deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateZ(-800px) rotateY(90deg);
+              transform: translateZ(-800px) rotateY(90deg);
+      opacity: 0;
+    }
+  }
+  
